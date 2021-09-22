@@ -32,4 +32,4 @@ A video game with three.js
 
 
 
-Bonus : Can move the enemy with WASD
+Bonus : Can move the enemy (purple color) with WASD
