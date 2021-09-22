@@ -25,8 +25,8 @@ function init()
     noGround = [];
     ground = new Ground(0xffffff, WIDTH, HEIGHT, 10);
     
-    player1 = new Player("player1", 0xffff00, new THREE.Vector2(50, 0), 0);
-    player2 = new Player("player2", 0x800080 , new THREE.Vector2(0, 0), 0);
+    player1 = new Player("player1", 0xffff00, new THREE.Vector2(0, 0), 0);
+    player2 = new Player("player2", 0x800080 , new THREE.Vector2(50, 0), 0);
     // player3 = new Player("player3", 0x800080 , new THREE.Vector2(50, 0), 0);
     // player4 = new Player("player4", 0x800080 , new THREE.Vector2(50, 0), 0);
 
@@ -56,7 +56,7 @@ function Ground(color, size_x, size_y, nb_tile)
     for (x = minX; x <= maxX; x = x+sizeOfTileX){
         for (y = minY; y <= maxY; y = y+sizeOfTileY){
             color = colors[Math.floor(Math.random()*colors.length)];
-            if (x == 50 && y == 0 && color == 0x000000)
+            if (x == 0 && y == 0 && color == 0x000000)
                 color = colors[Math.floor(Math.random()*colors.length)];
             if (0x000000 != color)
             {
