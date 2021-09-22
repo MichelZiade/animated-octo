@@ -31,9 +31,10 @@ function shoot()
         player1.bullets[i].position.y += moveDistance * Math.sin(player1.bullets[i].angle);
         // console.log(player1.bullets[i].position.x)
         console.log(player1.position.y)
-        if (player1.bullets[i].position.x >= player2.position.x + 10 || player1.bullets[i].position.x >= player2.position.x - 10){
+        if (player1.bullets[i].position.x >= player2.position.x - 10 && player1.bullets[i].position.x <= player2.position.x + 10 ){
+            if (player1.bullets[i].position.y >= player2.position.y - 10   && player1.bullets[i].position.y <= player2.position.y + 10 ){
             scene.remove(player2.graphic);
-        }
+        }}
     }
 
 }
